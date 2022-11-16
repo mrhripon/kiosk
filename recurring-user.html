@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="master-outer-box">
+            <div class="master-inner-box border-primary-1 p_relative">
+                <div class="main-content-wrapper border-primary-1 border-radius-lg p_relative z-index-1">
+                    <div class="date-wrapper p_absolute">
+                        <p class="time">13:02</p>
+                        <p class="date">25 OCT 2022</p>
+                    </div>
+
+                    <div class="section-title mb-34 p_relative">
+                        <h3>Welcome back! Select your name from our registry.
+                        </h3>
+                    </div>
+
+                    <div class="max-450">
+                        <div class="input-box">
+                            <input type="text" id="search-name">
+                            <label for="search-name">Search User</label>
+                        </div>
+                        <ul class="name-list" id="name-list">
+                            <li><a href="#">Abdullah</a></li>
+                            <li><a href="#">Sakib</a></li>
+                            <li><a href="#">Jamal</a></li>
+                            <li><a href="#">kamal</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-navigation p_absolute">
+                        <a href="./user-page-1.html" class="navigation-arw prev-arw"><img class="img_fluid"
+                                src="assets/images/prev.png" alt=""></a>
+                        <a href="./user-page-2.html" class="navigation-arw next-arw">
+                            <img class="img_fluid" src="assets/images/next.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- ./master-inner-box -->
+        </div> <!-- ./master-outer-box -->
+    </main>
+
+
+
+    <!-- All Js here  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const filterInput = document.getElementById('search-name');
+
+        function filterName() {
+            // 1. Get the Searched Value 
+            const value = filterInput.value.toUpperCase();
+
+            // 2. Get the List Items 
+            const nameListUL = document.getElementById('name-list');
+            let lis = nameListUL.querySelectorAll('li');
+
+            lis.forEach(each => {
+                let a = each.getElementsByTagName('a')[0];
+                if (a.innerHTML.toUpperCase().indexOf(value) > -1) {
+                    each.style.display = '';
+                } else {
+                    each.style.display = 'none';
+                }
+            })
+        }
+        filterInput.addEventListener('keyup', filterName);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="master-outer-box">
+            <div class="master-inner-box border-primary-1 p_relative">
+                <div class="main-content-wrapper border-primary-1 border-radius-lg p_relative z-index-1">
+                    <div class="date-wrapper p_absolute">
+                        <p class="time">13:02</p>
+                        <p class="date">25 OCT 2022</p>
+                    </div>
+
+                    <div class="congratulation-wrapper" id="congratulation-msg">
+                        <a href="#" class="main-logo d_inline_block"><img class="img_fluid" src="assets/images/logo.png"
+                                alt=""></a>
+                        <div class="section-title mb-0 p_relative">
+                            <h3>Thank you for signing in!</h3>
+                        </div>
+                    </div>
+
+                    <form action="#" class="form-content">
+                        <div class="section-title p_relative">
+                            <h3>What are you here for today?</h3>
+                        </div>
+
+                        <div class="input-boxes">
+                            <div class="el-rw">
+                                <div class="input-box check-box">
+                                    <input type="radio" id="tour" name="subject">
+                                    <label for="tour">Tour</label>
+                                </div>
+                            </div>
+                            <div class="el-rw">
+                                <div class="input-box check-box ui-reverse">
+                                    <input type="radio" id="idea" name="subject">
+                                    <label for="idea">Submitting an idea</label>
+                                </div>
+                            </div>
+                            <div class="el-rw">
+                                <div class="input-box check-box">
+                                    <input type="radio" id="meeting" name="subject">
+                                    <label for="meeting">Touchpoint/Meeting</label>
+                                </div>
+                            </div>
+                            <div class="el-rw">
+                                <div class="input-box check-box ui-reverse">
+                                    <input type="radio" id="other" name="subject">
+                                    <label for="other">Other:</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="bottom-navigation p_absolute">
+                        <a href="./user-page-1.html" class="navigation-arw prev-arw"><img class="img_fluid"
+                                src="assets/images/prev.png" alt=""></a>
+                        <a href="#" class="navigation-arw next-arw" data-collection-end="congratulations">
+                            <img class="img_fluid" src="assets/images/next.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- ./master-inner-box -->
+        </div> <!-- ./master-outer-box -->
+
+
+    </main>
+
+
+
+    <!-- All Js here  -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
